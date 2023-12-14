@@ -13,8 +13,9 @@ public class PlayerController : MonoBehaviour
     public float playerSpeed = 5f, jumpForce = 10f, gravity = 50f;
     private int vecesSalto;
     float yHeight;
-    int coins = 0;
-    int lifes = 3;
+    public int coins = 0;
+    public int lifes = 3;
+    public bool isInmortal = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +30,8 @@ public class PlayerController : MonoBehaviour
 
         characterController.Move(movement * Time.deltaTime);               
     }
+
+
 
     private void Jump()
     {
@@ -74,29 +77,17 @@ public class PlayerController : MonoBehaviour
         movement *= playerSpeed;
 
     }
-    private void OnTriggerEnter(Collider collision)
+
+    public void DisableImmunity()
     {
-        if (collision.CompareTag("Coin"))
-        {
-            coins++;
-            if (coins >= 5)
-            {
-                coins = 0;
-                lifes++;
-                Debug.Log("Has conseguido una vida");
-
-            }
-        }
-        if (collision.CompareTag("Enemy"))
-        {
-            lifes--;
-            if (lifes == 0)
-            {
-                Time.timeScale = 0;
-                Debug.Log("Has perdido");
+        isInmortal = false;
+        Debug.Log("Inmunidad desactivada");
+    }
 
 
-            }
-        }
+    public void EnableImmunity()
+    {
+        isInmortal = true;
+        Debug.Log("Inmunidad activada");
     }
 }

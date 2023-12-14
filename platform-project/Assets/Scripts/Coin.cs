@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    // Este método se llama cuando otro collider entra en el área de trigger de este collider.
     private void OnTriggerEnter(Collider other)
     {
-        // Verifica si el objeto con el que entramos en contacto tiene la etiqueta "Jugador".
-        if (other.CompareTag("Player"))
+        PlayerController playerController = other.GetComponent<PlayerController>();
+        playerController.coins++;
+        Destroy(gameObject);
+        if (playerController.coins == 3 || playerController.coins == 6 || playerController.coins == 9)
         {
-            // Destruye esta moneda específica.
-            Destroy(gameObject);
+            playerController.lifes++;
+            Debug.Log("¡Has ganado una vida! Ahora tienes " + playerController.lifes + " vidas.");
         }
-    }
+    }    
 }
