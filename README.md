@@ -4,7 +4,7 @@ Este es un proyecto de Unity creado por [SergioIzq] como parte de mi práctica y
 
 ## Descripción del Proyecto
 
-El proyecto se centra en [diferentes runners y juegos estilo plataforma]. Durante el desarrollo, he trabajado en la optimización del rendimiento y la creación de un entorno de juego envolvente.
+El proyecto se centra en diferentes runners y juegos estilo plataforma. Durante el desarrollo, he trabajado en la optimización del rendimiento y la creación de un entorno de juego envolvente.
 
 ## Objetivos de Aprendizaje
 
@@ -15,6 +15,7 @@ El proyecto se centra en [diferentes runners y juegos estilo plataforma]. Durant
 ## Tecnologías Utilizadas
 
 - Unity
+- C#
 
 ## Contribuciones
 
