@@ -1,27 +1,27 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ProyectilController : MonoBehaviour
 {
-    public float velocidadReducida = 5f;
+    public float velocidadReducida = 5F, duracionRalentizacion = 3F;
 
     void OnCollisionEnter(Collision collision)
     {
-        // Verificar si el proyectil ha colisionado con un jugador
         PlayerController jugador = collision.gameObject.GetComponent<PlayerController>();
 
         if (jugador != null)
         {
-            // Obtener el componente Rigidbody del jugador
-            Rigidbody jugadorRb = jugador.GetComponent<Rigidbody>();
+            // Guardar la velocidad actual del jugador antes de reducirla
+            float velocidadActual = jugador.acc;
 
-            if (jugadorRb != null)
-            {
-                // Reducir la velocidad del jugador
-                jugadorRb.velocity /= velocidadReducida;
+            // Reducir la velocidad del jugador
+            jugador.ReducirVelocidad(velocidadReducida);            
 
-                // Destruir el proyectil al tocar al jugador
-                Destroy(gameObject);
-            }
+            // Destruir el proyectil al tocar al jugador
+            Destroy(gameObject);
+
+            // Iniciar el tiempo de ralentización
+            jugador.IniciarTiempoRalentizacion(velocidadActual, duracionRalentizacion);
         }
     }
 }

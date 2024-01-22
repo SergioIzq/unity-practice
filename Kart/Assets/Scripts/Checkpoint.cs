@@ -12,8 +12,9 @@ public class Checkpoint : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(pj != null) { 
-            pj = other.GetComponent<PlayerController>();
+        pj = other.GetComponent<PlayerController>();
+
+        if (pj != null) { 
             pj.setCanWin(true);
 
             Debug.Log("Puede ganar el jugador "+ pj.playerNumber + ": " + pj.getCanWin());

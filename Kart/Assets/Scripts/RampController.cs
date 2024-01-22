@@ -7,13 +7,14 @@ public class RampController : MonoBehaviour
 {
     public float fuerzaEmpuje = 500f;
     Rigidbody jugadorRb;
-    Vector3 direccionEmpuje;
     private void OnTriggerEnter(Collider other)
     {
         jugadorRb = other.GetComponent<Rigidbody>();
-        direccionEmpuje = transform.forward;
-        jugadorRb.AddForce(direccionEmpuje * fuerzaEmpuje);
 
+        if ( jugadorRb != null)
+        {
+            jugadorRb.AddForce(transform.forward * fuerzaEmpuje);
+        }
     }
 }
 

@@ -1,22 +1,18 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
-{
-    public float offsetZ = 1f; // Ajusta según sea necesario
-
-    public GameObject Proyectile; // Asegúrate de asignar un GameObject en el Inspector
-    public float proyectilSpeed = 5F;
-    private bool canWin = false;
+{    
+    public GameObject Proyectile; 
+    public float proyectilSpeed = 5F, tiempoDeEsperaLanzamiento = 5F, rotationSpeed = 5F, acc, dcc, altura = 0.44F;
+    private bool canWin = false, ralentizando = false, cooldownLanzamientoActivo = false;
     float horizontal, vertical, speed;
     Vector3 rot;
     Rigidbody rb;
     public int playerNumber;
-    public float rotationSpeed = 5f, acc, dcc;
     private int loaps = 0;
+    private float tiempoRalentizacionInicio, tiempoRalentizacionDuracion, accOriginal, tiempoCooldownInicio;    
 
     void Start()
     {
@@ -27,20 +23,11 @@ public class PlayerController : MonoBehaviour
     {
         GetHorizontalInput();
         GetVerticalInput();
-
-        if (playerNumber == 1)
+        // Restringir el lanzamiento de proyectiles si no ha pasado el tiempo de espera
+        if (!cooldownLanzamientoActivo && ((playerNumber == 1 && Input.GetKeyDown(KeyCode.G)) || (playerNumber == 2 && Input.GetKeyDown(KeyCode.Mouse0))))
         {
-            if (Input.GetKeyDown(KeyCode.G))
-            {
-                LanzarProyectil();
-            }
-        }
-        else
-        {
-            if (Input.GetKeyDown(KeyCode.Mouse0))
-            {
-                LanzarProyectil();
-            }
+            LanzarProyectil();
+            ActivarCooldownLanzamiento();
         }
 
         if (loaps == 3)
@@ -53,6 +40,10 @@ public class PlayerController : MonoBehaviour
                 Time.timeScale = 1;
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
+        }
+        if (ralentizando && Time.time - tiempoRalentizacionInicio >= tiempoRalentizacionDuracion)
+        {
+            RestaurarVelocidad(accOriginal);
         }
     }
 
@@ -71,12 +62,23 @@ public class PlayerController : MonoBehaviour
                 rb.AddTorque(-rot);
             }
         }
+        if (cooldownLanzamientoActivo && Time.time - tiempoCooldownInicio >= tiempoDeEsperaLanzamiento)
+        {
+            cooldownLanzamientoActivo = false;
+        }
+    }
+
+    void ActivarCooldownLanzamiento()
+    {
+        // Desactivar la posibilidad de lanzar proyectiles durante el tiempo de espera
+        cooldownLanzamientoActivo = true;
+        tiempoCooldownInicio = Time.time;
     }
 
     private void GetVerticalInput()
     {
         speed = 0;
-        vertical = Input.GetAxis("Vertical"+playerNumber);
+        vertical = Input.GetAxis("Vertical" + playerNumber);
         if (vertical > 0)
         {
             speed = acc * vertical;
@@ -89,7 +91,7 @@ public class PlayerController : MonoBehaviour
 
     private void GetHorizontalInput()
     {
-        horizontal = Input.GetAxis("Horizontal"+playerNumber);
+        horizontal = Input.GetAxis("Horizontal" + playerNumber);
         float newRot = horizontal * rotationSpeed;
         rot = new Vector3(0f, newRot, 0f);
     }
@@ -115,11 +117,10 @@ public class PlayerController : MonoBehaviour
     }
 
     void LanzarProyectil()
-    {
-        float alturaDeseada = 1f;
+    {        
 
         // Crear una instancia del proyectil
-        GameObject proyectil = Instantiate(Proyectile, new Vector3(transform.position.x, alturaDeseada, transform.position.z), transform.rotation);
+        GameObject proyectil = Instantiate(Proyectile, new Vector3(transform.position.x, altura, transform.position.z), transform.rotation);
 
         // Obtener el componente Rigidbody del proyectil
         Rigidbody proyectilRb = proyectil.GetComponent<Rigidbody>();
@@ -129,7 +130,32 @@ public class PlayerController : MonoBehaviour
             // Asignar velocidad al proyectil
             proyectilRb.velocity = transform.forward * proyectilSpeed;
         }
+
         Destroy(proyectil, 2);
     }
 
+    public void IniciarTiempoRalentizacion(float velocidadOriginal, float duracion)
+    {
+        tiempoRalentizacionInicio = Time.time;
+        tiempoRalentizacionDuracion = duracion;
+        accOriginal = velocidadOriginal;
+        ralentizando = true;
+    }
+    public void ReducirVelocidad(float factorReduccion)
+    {
+        // Reducir la velocidad del jugador
+        acc /= factorReduccion;
+        accOriginal = acc;
+        ralentizando = true;
+        tiempoRalentizacionInicio = Time.time;
+        tiempoRalentizacionDuracion = tiempoDeEsperaLanzamiento;
+
+    }
+
+    public void RestaurarVelocidad(float velocidadOriginal)
+    {
+        // Restablecer la velocidad original del jugador
+        acc = velocidadOriginal;
+        ralentizando = false; 
+    }
 }

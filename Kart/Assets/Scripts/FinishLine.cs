@@ -6,9 +6,10 @@ public class FinishLine : MonoBehaviour
     PlayerController pj;
     private void OnTriggerEnter(Collider other)
     {
+        pj = other.GetComponent<PlayerController>();
+
         if (pj != null)
         {
-            pj = other.GetComponent<PlayerController>();
 
             if (pj.getCanWin())
             {
