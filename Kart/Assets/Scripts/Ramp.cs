@@ -1,9 +1,5 @@
-using JetBrains.Annotations;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-public class RampController : MonoBehaviour
+public class Ramp : MonoBehaviour
 {
     public float fuerzaEmpuje = 500f;
     Rigidbody jugadorRb;

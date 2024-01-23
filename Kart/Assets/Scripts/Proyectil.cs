@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ProyectilController : MonoBehaviour
+public class Proyectil : MonoBehaviour
 {
     public float velocidadReducida = 5F, duracionRalentizacion = 3F;
 

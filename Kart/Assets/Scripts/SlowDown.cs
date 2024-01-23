@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class SlowDownController : MonoBehaviour
+public class SlowDown : MonoBehaviour
 {
-    public float factorRalentizar = 0.5F; 
+    public float factorRalentizar = 0.8F; 
     Rigidbody pjRb;
 
     private void OnTriggerStay(Collider other)
@@ -14,6 +12,7 @@ public class SlowDownController : MonoBehaviour
         {
             // Ralentizar la velocidad
             pjRb.velocity *= factorRalentizar;
+            
         }
     }
 }
