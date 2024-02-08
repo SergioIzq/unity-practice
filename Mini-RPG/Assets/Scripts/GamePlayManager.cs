@@ -1,29 +1,39 @@
-using UnityEditor.SearchService;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class GamePlayManager : MonoBehaviour
+public class GameplayManager : MonoBehaviour
 {
-    public static GamePlayManager instance;
+    public static GameplayManager instance;
+    public bool[] hints;
 
+    private void Start()
+    {
+
+    }
+    private void Update()
+    {
+        
+    }
 
     private void Awake()
     {
-        // Aseguramos que solo haya una instancia del Singleton
-        if (instance != null)
+        if (instance == null)
         {
             instance = this;
-
         }
         else
         {
             Destroy(instance);
         }
+
         DontDestroyOnLoad(gameObject);
     }
 
-    public void ChangeScene(int number)
+    public void setHint(int idHint)
     {
-        SceneManager.LoadScene(number);
+        hints[idHint] = true;
     }
 }

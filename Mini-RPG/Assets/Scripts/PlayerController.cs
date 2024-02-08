@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
-    public float speed = 5f; // Velocidad de movimiento del jugador
-
+    public float speed = 8f; // Velocidad de movimiento del jugador
+    public int coins = 0;
+    public int lifes = 3;
+    public GameObject leftRect;
+    public GameObject rightRect;
     // Método Update se llama una vez por cada frame
     void Update()
     {
@@ -13,6 +16,29 @@ public class Player : MonoBehaviour
         float moveHorizontal = 0f;
         float moveVertical = 0f;
 
+        // Verificar si se presiona una tecla (por ejemplo, la tecla "Espacio")
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            // Mostrar los rectángulos
+            leftRect.SetActive(true);
+        }
+        if (Input.GetKeyUp(KeyCode.LeftArrow))
+        {
+            // Mostrar los rectángulos
+            leftRect.SetActive(false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            // Mostrar los rectángulos
+            rightRect.SetActive(true);
+        }
+
+        if (Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            // Mostrar los rectángulos
+            rightRect.SetActive(false);
+        }
         // Movimiento horizontal
         if (Input.GetKey(KeyCode.A)) // Tecla A para moverse a la izquierda
         {
