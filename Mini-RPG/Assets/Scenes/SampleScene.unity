@@ -577,7 +577,7 @@ GameObject:
   - component: {fileID: 329569343}
   - component: {fileID: 329569344}
   m_Layer: 0
-  m_Name: Object
+  m_Name: Object (Wolf-Greatsword)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -644,8 +644,8 @@ Transform:
   m_GameObject: {fileID: 329569338}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.3, y: -22.05, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 5}
+  m_LocalPosition: {x: -0.07, y: 12.1, z: 0}
+  m_LocalScale: {x: 0.5810672, y: 0.5810672, z: 2.9053361}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -695,7 +695,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.15617508}
+  m_Offset: {x: 0, y: 0.011517525}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -706,7 +706,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.8896835}
+  m_Size: {x: 2.5019608, y: 2.5152683}
   m_EdgeRadius: 0
 --- !u!1 &355165776
 GameObject:
@@ -1460,150 +1460,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 528318325}
   m_CullTransparentMesh: 1
---- !u!1 &548530218
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 548530222}
-  - component: {fileID: 548530221}
-  - component: {fileID: 548530220}
-  - component: {fileID: 548530219}
-  m_Layer: 0
-  m_Name: Object (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!61 &548530219
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 548530218}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.15617508}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.5, y: 2.49}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.8896835}
-  m_EdgeRadius: 0
---- !u!114 &548530220
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 548530218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65043142c008cda4e8bb77a732cd855c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  idHint: 4
---- !u!212 &548530221
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 548530218}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a753ad690642070489f76d5766431e53, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &548530222
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 548530218}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.15, y: -22.56, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 5}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &586148995
 GameObject:
   m_ObjectHideFlags: 0
@@ -1617,7 +1473,7 @@ GameObject:
   - component: {fileID: 586148997}
   - component: {fileID: 586148996}
   m_Layer: 0
-  m_Name: Object (1)
+  m_Name: Object (Havel-Ring)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1655,7 +1511,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.15617508}
+  m_Offset: {x: 0, y: 0.031212687}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1666,7 +1522,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.8896835}
+  m_Size: {x: 2.4748063, y: 2.451719}
   m_EdgeRadius: 0
 --- !u!114 &586148997
 MonoBehaviour:
@@ -1722,7 +1578,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 11ab8cdf26fcc164e8460cb8cd81cf15, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e27887406b782554692dac1951648608, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1742,8 +1598,8 @@ Transform:
   m_GameObject: {fileID: 586148995}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.11, y: -23.11, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 5}
+  m_LocalPosition: {x: 20.42, y: -0.12, z: 0}
+  m_LocalScale: {x: 0.5687785, y: 0.5687785, z: 2.8438928}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2612,10 +2468,10 @@ RectTransform:
   - {fileID: 1734337908}
   m_Father: {fileID: 1319735083}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 315.27002, y: -410.47498}
+  m_SizeDelta: {x: 180.4, y: 180.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &735555898
 MonoBehaviour:
@@ -2673,6 +2529,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1915013130}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &735555899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2723,10 +2591,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2780bf9af7a24724a89028eeefa0f7b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hint: "Pista n\xFAmero 3"
+  hint: "Anillo para guerreros que usan accesorios pesados. Aumenta la carga m\xE1xima
+    del equipo. Este anillo recibe el nombre de Havel la Roca, el compa\xF1ero de
+    armas de Gwyn, el Primer Se\xF1or. El arte de la guerra es una constante desde
+    hace eones, y en la actualidad, son tantos los que siguen los pasos de Havel
+    como en sus tiempos."
   text: {fileID: 664355346}
-  image: {fileID: 0}
-  imageDisplay: {fileID: 0}
+  image: {fileID: 21300000, guid: e27887406b782554692dac1951648608, type: 3}
+  imageDisplay: {fileID: 1915013132}
 --- !u!1 &807402036
 GameObject:
   m_ObjectHideFlags: 3
@@ -3626,7 +3498,7 @@ GameObject:
   - component: {fileID: 1101970869}
   - component: {fileID: 1101970868}
   m_Layer: 0
-  m_Name: Object (2)
+  m_Name: Object (Bumblebee-Ring)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3664,18 +3536,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.15617508}
+  m_Offset: {x: 0, y: 0.016978264}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.12, y: 5.12}
+    oldSize: {x: 2.5, y: 2.49}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.8896835}
+  m_Size: {x: 2.481354, y: 2.4860134}
   m_EdgeRadius: 0
 --- !u!114 &1101970869
 MonoBehaviour:
@@ -3689,7 +3561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65043142c008cda4e8bb77a732cd855c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idHint: 2
+  idHint: 1
 --- !u!212 &1101970870
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3731,7 +3603,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f2a9172931ed8ef4585cd5c01429a37a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 11ab8cdf26fcc164e8460cb8cd81cf15, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3751,8 +3623,8 @@ Transform:
   m_GameObject: {fileID: 1101970867}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.77, y: 14.2, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 5}
+  m_LocalPosition: {x: -20.18, y: 0.13, z: 0}
+  m_LocalScale: {x: 0.5684, y: 0.5684, z: 2.842}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -4776,7 +4648,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1468596742
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5194,10 +5066,10 @@ RectTransform:
   - {fileID: 1186197393}
   m_Father: {fileID: 1319735083}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 119.87001, y: -410.47498}
+  m_SizeDelta: {x: 180.4, y: 180.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1638309157
 MonoBehaviour:
@@ -5489,10 +5361,10 @@ RectTransform:
   - {fileID: 915674471}
   m_Father: {fileID: 1319735083}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 119.87001, y: -215.075}
+  m_SizeDelta: {x: 180.4, y: 180.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1670301972
 MonoBehaviour:
@@ -5823,7 +5695,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Espada recta de drag\xF3n"
+  m_text: Anillo de Havel
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6094,10 +5966,10 @@ RectTransform:
   - {fileID: 2043320346}
   m_Father: {fileID: 1319735083}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 315.27002, y: -215.075}
+  m_SizeDelta: {x: 180.4, y: 180.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1870837867
 MonoBehaviour:
@@ -6217,7 +6089,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2780bf9af7a24724a89028eeefa0f7b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hint: Pista 2
+  hint: "Uno de los anillos especiales regalados a los cuatro caballeros de Gwyn.
+    El Anillo del abejorro pertenec\xEDa al Se\xF1or de la espada Ciaran. Aumentar
+    sus ataques cr\xEDticos, permite a su portador aniquilar a sus enemigos, como
+    hizo la daga de Ciaran con los del Se\xF1or Gwyn."
   text: {fileID: 664355346}
   image: {fileID: 21300000, guid: 11ab8cdf26fcc164e8460cb8cd81cf15, type: 3}
   imageDisplay: {fileID: 1915013132}
@@ -7012,7 +6887,7 @@ GameObject:
   - component: {fileID: 1987614116}
   - component: {fileID: 1987614115}
   m_Layer: 0
-  m_Name: Object (3)
+  m_Name: Object (Estus-Flask)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7050,18 +6925,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.15617508}
+  m_Offset: {x: 0.13413262, y: 0.18149662}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.5, y: 2.49}
+    oldSize: {x: 5.12, y: 5.12}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.8896835}
+  m_Size: {x: 2.6787877, y: 3.8367176}
   m_EdgeRadius: 0
 --- !u!114 &1987614116
 MonoBehaviour:
@@ -7075,7 +6950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65043142c008cda4e8bb77a732cd855c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idHint: 3
+  idHint: 2
 --- !u!212 &1987614117
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7117,7 +6992,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a753ad690642070489f76d5766431e53, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f2a9172931ed8ef4585cd5c01429a37a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7137,8 +7012,8 @@ Transform:
   m_GameObject: {fileID: 1987614114}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.11, y: -23.11, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 5}
+  m_LocalPosition: {x: 0.01, y: -12.39, z: 0}
+  m_LocalScale: {x: 0.3258, y: 0.3258, z: 1.629}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -7618,6 +7493,5 @@ SceneRoots:
   - {fileID: 1101970871}
   - {fileID: 1987614118}
   - {fileID: 586148999}
-  - {fileID: 548530222}
   - {fileID: 1498258818}
   - {fileID: 1599216659}
