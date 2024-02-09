@@ -12,16 +12,7 @@ public class Coin : MonoBehaviour
             PlayerController playerController = other.GetComponent<PlayerController>();
             playerController.coins++;
             Destroy(gameObject);
-            Debug.Log(playerController.lifes);
-            if (playerController.lifes >= 3)
-            {
-                Debug.Log("Has llegado al máximo de vidas." + playerController.lifes);
-            }
-            else
-            {
-                playerController.lifes++;
-                Debug.Log("¡Has ganado una vida! Ahora tienes " + playerController.lifes + " vidas.");
-            }
+            Debug.Log("Has coleccionado " + playerController.coins + " moneda(s)!!.");
         }
     }    
 }
